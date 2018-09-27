@@ -19,7 +19,7 @@
       },
       mounted(){
         var vm = this
-        axios.get('http://localhost:3131/api')
+        axios.get('https://poc-express-api-heroku.herokuapp.com/api')
           .then(data => {
             vm.src = JSON.stringify(data.data)
             console.log(data)
