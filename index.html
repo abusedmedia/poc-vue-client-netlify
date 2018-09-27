@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+
+  <script type="text/javascript" src="node_modules/vue/dist/vue.js"></script>
+  <script type="text/javascript" src="node_modules/axios/dist/axios.js"></script>
+</head>
+<body>
+  <div id="app">
+    <textarea v-model="src"></textarea>
+  </div>
+
+  <script type="text/javascript">
+    new Vue({
+      el: '#app',
+      data: {
+          src: ''
+      },
+      mounted(){
+        var vm = this
+        axios.get('http://localhost:3131/api')
+          .then(data => {
+            vm.src = JSON.stringify(data.data)
+            console.log(data)
+          })
+      }
+    })
+  </script>
+</body>
+</html>
