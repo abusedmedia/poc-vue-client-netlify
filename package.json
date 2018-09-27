@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "mkdir dist && cp node_modules/vue/dist/vue.js dist/vue.js && cp node_modules/axios/dist/axios.js dist/axios.js && cp index.html dist/index.html"
   },
   "repository": {
     "type": "git",
